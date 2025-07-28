@@ -18,40 +18,8 @@ header {
 }
 header .logo img {
   height: 60px;
-  filter: drop-shadow(0 0 10px #00ff40);
 }
 header nav a { margin: 0 1rem; }
-
-.glitch {
-  position: relative;
-  font-weight: bold;
-  color: white;
-  text-transform: uppercase;
-}
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-}
-.glitch::before { color: #00ff40; animation: glitchTop 1s infinite; }
-.glitch::after { color: #ffffff; animation: glitchBottom 1s infinite; }
-@keyframes glitchTop {
-  0% { transform: translate(2px, -2px); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(-2px, -1px); }
-  60% { transform: translate(1px, 1px); }
-  80% { transform: translate(-1px, -1px); }
-  100% { transform: translate(0); }
-}
-@keyframes glitchBottom {
-  0% { transform: translate(-2px, 2px); }
-  20% { transform: translate(2px, -2px); }
-  40% { transform: translate(2px, 1px); }
-  60% { transform: translate(-1px, -1px); }
-  80% { transform: translate(1px, 1px); }
-  100% { transform: translate(0); }
-}
 
 .hero {
   height: 100vh;
@@ -59,7 +27,7 @@ header nav a { margin: 0 1rem; }
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #000; /* Plain background */
+  background: #000;
   position: relative;
   text-align: center;
 }
@@ -70,16 +38,14 @@ header nav a { margin: 0 1rem; }
   background: rgba(0,0,0,0.6);
 }
 .hero-logo {
-  width: 150px;
-  margin-bottom: 1rem;
-  filter: drop-shadow(0 0 15px #00ff40);
+  width: 300px;
+  max-width: 90%;
+  margin-bottom: 2rem;
 }
 .btn {
   padding: 0.8rem 2rem;
   background: #00ff40;
   color: black;
-  margin-top: 1.5rem;
-  z-index: 1;
   border-radius: 5px;
   transition: background 0.3s;
 }
@@ -88,23 +54,6 @@ header nav a { margin: 0 1rem; }
 .content {
   padding: 4rem 2rem;
   text-align: center;
-}
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-.card, .release {
-  background: #1a1a1a;
-  padding: 2rem;
-  border-radius: 8px;
-  width: 200px;
-}
-.release img {
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 0.5rem;
 }
 
 .fade-in {
@@ -139,11 +88,12 @@ form button {
 }
 
 @media (max-width: 768px) {
+  .hero-logo {
+    width: 250px;
+  }
   header nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .hero h1 { font-size: 2rem; }
-  .grid { flex-direction: column; align-items: center; }
 }
