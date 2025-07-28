@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diemond Records</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Diemond Records Logo">
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#artists">Artists</a>
+      <a href="#releases">Releases</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <img src="images/logo.png" alt="Diemond Records" class="hero-logo">
+    <h1 class="glitch" data-text="Get Rich or Die Trying">Get Rich or Die Trying</h1>
+    <p>The underground sound of tomorrow</p>
+    <a href="#releases" class="btn">Listen Now</a>
+  </section>
+
+  <section id="about" class="content fade-in">
+    <h2>About Us</h2>
+    <p>Diemond Records pushes the boundaries of EDM with raw energy and a “do or die” mentality.</p>
+  </section>
+
+  <section id="artists" class="content fade-in">
+    <h2>Artists</h2>
+    <div class="grid">
+      <div class="card">Artist 1</div>
+      <div class="card">Artist 2</div>
+      <div class="card">Artist 3</div>
+    </div>
+  </section>
+
+  <section id="releases" class="content fade-in">
+    <h2>Latest Releases</h2>
+    <div class="grid">
+      <div class="release">
+        <img src="images/cover1.jpg" alt="Release 1">
+        <p>Track Name – Artist</p>
+      </div>
+      <div class="release">
+        <img src="images/cover2.jpg" alt="Release 2">
+        <p>Track Name – Artist</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="content fade-in">
+    <h2>Contact Us</h2>
+    <form action="/contact" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Diemond Records</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
